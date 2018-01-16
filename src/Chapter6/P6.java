@@ -57,10 +57,11 @@ public class P6 {
     }
 
     /**
-     * Main Method
+     * Conversion
      *
      * @param dollars arguments from command line prompt
      * @param curency arguments from command line prompt
+     * @return arguments from dollars value multiplied by currency value
      */
     public static double conversion(double dollars, double curency) {
 

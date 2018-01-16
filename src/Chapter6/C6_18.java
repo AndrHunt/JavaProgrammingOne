@@ -3,7 +3,7 @@ package Chapter6;
 import java.util.Scanner;
 
 /**
- * Program that creates a
+ * Program detects a proper password
  *
  * @author Andrew Hunt
  */
@@ -16,54 +16,47 @@ public class C6_18 {
      */
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter a password");
-        String Password = input.nextLine();
-
-        if (Check(Password)) {
-            System.out.println("Valid Password");
+        String password;
+        System.out.print("Enter your password: ");
+        password = input.nextLine();
+        if (checkPassword(password)) {
+            System.out.println("Valid password");
         } else {
-            System.out.println("Invalid Password");
+            System.out.println("Invalid password");
         }
-
     }
-
-    public static boolean Check(String Password) {
-
-        if (Password.length()  
-            8
-        
-            ) {
-           System.out.print("A password must have at least eight characters");
+    
+    
+    /**
+     * Check Password
+     *
+     * @param password arguments from command line prompt
+     * @return false, and true for the boolean value
+     */
+    public static boolean checkPassword(String password) {
+        int counter = 0;
+        // Must have at least 8 characters
+        if (password.length() < 8) {
+            System.out.println("A password must have at least eight characters");
             return false;
         }
-
-        for (int i = 0; i Password.length();
-        i++
-        
-            ) {
-    if (!Character.isLetterOrDigit(Password.charAt(i))) {
-                System.out.print("A password must have only letters and digits");
+        //Must consist of only letters or numbers
+        for (int i = 0; i < password.length(); i++) {
+            if (!(Character.isLetterOrDigit(password.charAt(i)))) {
+                System.out.println("A password must consist of only letters and digits");
                 return false;
             }
         }
-
-        int numberOfDigit = 0;
-        for (int i = 0; i Password.length();
-        i++
-        
-            ) {
-     if (Character.isDigit(Password.charAt(i))) {
-                numberOfDigit++;
+        //Must contain at least two digits
+        for (int i = 0; i < password.length(); i++) {
+            if (Character.isDigit(password.charAt(i))) {
+                ++counter;
             }
         }
-        if (numberOfDigit  
-            2
-        
-            ) {
-        System.out.print("A password must have at least 2 digits");
+        if (counter < 2) {
+            System.out.println("A password must contain at least two digits");
             return false;
         }
-        else if;
         return true;
     }
 
