@@ -5,7 +5,7 @@ package Chapter1;
  *
  * @author Andrew Hunt
  */
-public class C1_1 { 
+public class C1_1 {
 
     /**
      * Main Method
