@@ -25,8 +25,7 @@ public class C6_18 {
             System.out.println("Invalid password");
         }
     }
-    
-    
+
     /**
      * Check Password
      *

@@ -3,11 +3,10 @@ package Chapter3;
 import java.util.Scanner;
 
 /**
- * Program to
+ * Program that allows you to coin flip with the random value
  *
  * @author Andrew Hunt
  */
-
 public class C3_14 {
 
     /**
